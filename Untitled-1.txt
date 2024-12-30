@@ -1,0 +1,19 @@
+ let data = inputData.split('\n');
+
+    let word = data[0].slice(2);
+
+    let arrStr = data[1].split(' ');
+    let firstPattern = arrStr[0].slice(2);
+    arrStr[0] = firstPattern;
+
+    for(let i = 0 ; i < arrStr.length; i++){
+        let regex = new RegExp(arrStr[i],'i');
+        regex.ignoreCase;
+        if(regex.test(word)){
+            console.log(true);
+        }else{
+            console.log(false);
+        }
+    }
+    return "";
+    
